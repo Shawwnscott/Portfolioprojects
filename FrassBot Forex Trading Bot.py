@@ -156,7 +156,7 @@ class FrassTrader(tpqoa.tpqoa):
         
 if __name__ == "__main__":
 
-    trader = FrassTrader(r"C:\Users\frass\OneDrive\Documents\Coding & Programming\Trading Bot\FrassBot\oanda.cfg", "EUR_USD", "5min", EMA_5 = 5, EMA_10 = 10, EMA_20=20, units = 10000)
+    trader = FrassTrader(config, "EUR_USD", "5min", EMA_5 = 5, EMA_10 = 10, EMA_20=20, units = 10000)
     trader.get_most_recent()
     trader.stream_data(trader.instrument)
     if trader.position != 0:#If Open Position
